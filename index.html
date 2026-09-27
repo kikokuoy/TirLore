@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Лор ОС</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Имя Твоего Персонажа</h1>
+</header>
+
+<!-- ВКЛАДКА 1: ГЛАВНАЯ -->
+<section id="main" class="tab active">
+  <div class="main-container">
+    <div class="main-text">
+      <h2>О персонаже</h2>
+      <p>
+        Здесь пиши основной текст про своего персонажа.
+        Можешь менять этот текст как хочешь — просто редактируй HTML.
+      </p>
+      <p>
+        Добавляй сколько угодно абзацев, список, цитаты и т.д.
+      </p>
+    </div>
+    <div class="main-image">
+      <img src="images/main.jpg" alt="Персонаж">
+    </div>
+  </div>
+</section>
+
+<!-- ВКЛАДКА: ИСТОРИЯ -->
+<section id="history" class="tab">
+  <h2>История</h2>
+
+  <div class="history-nav">
+    <button onclick="showHistoryPart(1)">Часть 1</button>
+    <button onclick="showHistoryPart(2)">Часть 2</button>
+    <button onclick="showHistoryPart(3)">Часть 3</button>
+    <!-- Добавляй кнопки по мере необходимости -->
+  </div>
+
+  <div id="history-content">
+    <div class="history-part active" data-part="1">
+      <h3>Часть 1: Название</h3>
+      <p>Текст первой части истории...</p>
+    </div>
+    <div class="history-part" data-part="2">
+      <h3>Часть 2: Название</h3>
+      <p>Текст второй части истории...</p>
+    </div>
+    <div class="history-part" data-part="3">
+      <h3>Часть 3: Название</h3>
+      <p>Текст третьей части истории...</p>
+    </div>
+  </div>
+</section>
+
+<!-- ВКЛАДКА: ОТНОШЕНИЯ -->
+<section id="relations" class="tab">
+  <h2>Отношения</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="images/отношения/имя1.jpg" alt="Имя 1">
+      <h3>Имя персонажа 1</h3>
+      <p>Описание отношения твоего персонажа к нему...</p>
+    </div>
+
+    <div class="card">
+      <img src="images/отношения/имя2.jpg" alt="Имя 2">
+      <h3>Имя персонажа 2</h3>
+      <p>Описание отношения...</p>
+    </div>
+
+    <!-- Копируй блок .card для новых персонажей -->
+
+  </div>
+</section>
+
+<!-- ВКЛАДКА: АКСЕССУАРЫ -->
+<section id="accessories" class="tab">
+  <h2>Аксессуары</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="images/аксессуары/предмет1.jpg" alt="Предмет 1">
+      <h3>Название аксессуара</h3>
+      <p>Описание аксессуара, откуда он, что значит...</p>
+    </div>
+
+    <!-- Копируй блок .card для новых аксессуаров -->
+
+  </div>
+</section>
+
+<!-- ВКЛАДКА: НАВЫКИ / ХАРАКТЕРИСТИКИ -->
+<section id="skills" class="tab">
+  <h2>Навыки и характеристики</h2>
+
+  <div class="stats">
+
+    <div class="stat">
+      <span class="stat-name">Сила</span>
+      <span class="dots">
+        <span class="dot filled"></span>
+        <span class="dot filled"></span>
+        <span class="dot filled"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-name">Ловкость</span>
+      <span class="dots">
+        <span class="dot filled"></span>
+        <span class="dot filled"></span>
+        <span class="dot filled"></span>
+        <span class="dot filled"></span>
+        <span class="dot"></span>
+      </span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-name">Интеллект</span>
+      <span class="dots">
+        <span class="dot filled"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </span>
+    </div>
+
+    <!-- Копируй блок .stat для новых характеристик -->
+
+  </div>
+</section>
+
+<!-- НИЖНЕЕ МЕНЮ -->
+<nav class="bottom-nav">
+  <button onclick="showTab('main')">Главная</button>
+  <button onclick="showTab('history')">История</button>
+  <button onclick="showTab('relations')">Отношения</button>
+  <button onclick="showTab('accessories')">Аксессуары</button>
+  <button onclick="showTab('skills')">Навыки</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
